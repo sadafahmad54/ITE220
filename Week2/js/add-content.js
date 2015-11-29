@@ -27,9 +27,13 @@ var nameEle=document.getElementById("name");
 nameEle.textContent= ""+Name + "  Thank You for shopping here!";
 
 today=new Date() 
-if(today.getHours() >= 0 && today.getHours() < 12) 
+if(today.getHours() >= 0 && today.getHours() <= 12) 
 {      
 document.getElementById('greetings').innerHTML='Good Morning!'; 
+} 
+else if (today.getHours() > 12 && today.getHours() <= 16) 
+{      
+document.getElementById('greetings').innerHTML='Good Afternoon!'; 
 } 
 else 
 {      

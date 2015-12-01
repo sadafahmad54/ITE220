@@ -9,8 +9,8 @@ checkAvailability: function(){
 }
 };
 
-//var hotelName=hotel.name;
-//var roomsFree=hotel.checkAvailability;
+var hotelName=hotel.name;
+var roomsFree=hotel.checkAvailability;
 
 
 var elName=document.getElementById('hotelName');

@@ -70,8 +70,7 @@ var game = {
 			// Guess!
 		var ele = document.getElementById("guess");
 		ele.addEventListener("click", this.checkAnswer, false);
-		var ele = document.getElementById("show");
-		ele.addEventListener("click", show.num, false);
+		
 		
 		
 	},

@@ -1,6 +1,4 @@
 
-
-
  
  
 
@@ -60,7 +58,7 @@ $(function(){
 		});
 
 $(".wrapper").tubular
-			({videoId: 'https://www.youtube.com/watch?v=hthh1PyQ8m4'});
+			({videoId: 'e4Is32W-ppk'});
 		
 
 

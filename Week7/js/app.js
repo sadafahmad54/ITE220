@@ -1,5 +1,12 @@
 //Sadaf Ahmad 
+
+ 
+
 $(function(){
+
+
+	  
+
 	$("a").on("click",function(e){
 
 		e.preventDefault();
@@ -9,15 +16,22 @@ $(function(){
 			type:'GET',
 			url:'http://api.openweathermap.org/data/2.5/weather?q='+ city +' &appid=2de143494c0b295cca9337e1e96b00e0' ,
 			success: function(data){
+						
+	        	
+		 
+				function convertCelsius(temp) {
+					temp = Math.round(temp - 273.15);
+					return (temp  + " &deg;C");
+				};
+				function convertFarenheit(temp) {
+					temp = Math.round((temp * 9 / 5) - 459.67);
+					return (temp  + " &deg;F");
+				};
 				//console.log(data.name);
-				$("#container").html(data.name +":" + data.main.temp);
+				$("#container").html(data.name +":" + data.main.temp + data.units);
 			}
 
 		});
 	});
 });
-
-
-
-
 

@@ -16,8 +16,6 @@ $(function(){
 			type:'GET',
 			url:'http://api.openweathermap.org/data/2.5/weather?q='+ city +' &appid=2de143494c0b295cca9337e1e96b00e0' ,
 			success: function(data){
-						
-	        	
 		 
 				function convertCelsius(temp) {
 					temp = Math.round(temp - 273.15);
@@ -28,7 +26,15 @@ $(function(){
 					return (temp  + " &deg;F");
 				};
 				//console.log(data.name);
-				$("#container").html(data.name +":" + data.main.temp + data.units);
+				$("#container").html(data.name +":" + convertCelsius(data.main.temp));
+
+
+				$("#celsius").click(function(){
+					$("#container").html(data.name +":" + convertCelsius(data.main.temp));
+				});
+				$("#fahrenheit").click(function(){
+					$("#container").html(data.name +":" + convertFarenheit(data.main.temp));
+				});
 			}
 
 		});
